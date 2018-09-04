@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/banks"
+        xmlns:tns="http://www.example.com/banks"
+        elementFormDefault="qualified">
+
+    <element name="bank" type="tns:Bank" abstract="true"></element>
+    <element name="commercial_bank" type="tns:CommercialBank" substitutionGroup="tns:bank"></element>
+    <element name="central_bank" type="tns:CentralBank" substitutionGroup="tns:bank"></element>
+
+    <element name="banks">
+        <complexType>
+            <sequence>
+                <element ref="tns:bank" minOccurs="2" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Bank">
+        <sequence>
+            <element name="deposit"
+                     type="tns:Deposit"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="CommercialBank">
+        <complexContent>
+            <extension base="tns:Bank">
+                <attribute name="name" type="string" use="required"/>
+                <attribute name="branches_number" type="positiveInteger" use="optional"/>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="CentralBank">
+        <complexContent>
+            <extension base="tns:Bank">
+                <attribute name="country" type="string" use="required" />
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="AccountID">
+        <restriction base="ID">
+            <pattern value="([a-zA-Z])[a-zA-Z0-9]{1,15}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Deposit">
+        <sequence>
+            <element name="country" type="string"/>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="poste restance"></enumeration>
+                        <enumeration value="express"></enumeration>
+                        <enumeration value="calculated"></enumeration>
+                        <enumeration value="camulative"></enumeration>
+                        <enumeration value="saving"></enumeration>
+                        <enumeration value="metal"></enumeration>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="depositor" type="string"/>
+            <element name="account_ID" type="tns:AccountID"/>
+            <element name="amount_on_deposit" type="positiveInteger"/>
+            <element name="profitability" type="double"/>
+            <element name="time_constraints" type="dateTime"/>
+        </sequence>
+    </complexType>
+
+</schema>

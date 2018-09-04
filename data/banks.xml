@@ -1,0 +1,68 @@
+<banks  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="banks.xsd"
+        xsi:schemaLocation="banks.xsd ../data/banks.xsd">
+
+    <commercial_bank name="Bank Moscow-Minsk" branches_number="6">
+        <deposit>
+            <country>Belarus</country>
+            <type>metal</type>
+            <depositor>Ivanov Ivan</depositor>
+            <account_ID>q1</account_ID>
+            <amount_on_deposit>450</amount_on_deposit>
+            <profitability>12.5</profitability>
+            <time_constraints>2018-05-30T10:28:44</time_constraints>
+        </deposit>
+        <deposit>
+            <country>Russia</country>
+            <type>express</type>
+            <depositor>Petrov Petr</depositor>
+            <account_ID>q2</account_ID>
+            <amount_on_deposit>250</amount_on_deposit>
+            <profitability>2.5</profitability>
+            <time_constraints>2018-06-13T15:30:12</time_constraints>
+        </deposit>
+    </commercial_bank>
+
+    <commercial_bank name="Belinvestbank">
+        <deposit>
+            <country>Belarus</country>
+            <type>calculated</type>
+            <depositor>Sidorov Semen</depositor>
+            <account_ID>q3</account_ID>
+            <amount_on_deposit>1000</amount_on_deposit>
+            <profitability>3.5</profitability>
+            <time_constraints>2017-12-24T21:23:00</time_constraints>
+        </deposit>
+        <deposit>
+            <country>Belarus</country>
+            <type>saving</type>
+            <depositor>Saberov John</depositor>
+            <account_ID>q4</account_ID>
+            <amount_on_deposit>1450</amount_on_deposit>
+            <profitability>4.5</profitability>
+            <time_constraints>2018-02-20T06:00:00</time_constraints>
+        </deposit>
+    </commercial_bank>
+
+    <central_bank country="Belarus">
+        <deposit>
+            <country>Belarus</country>
+            <type>camulative</type>
+            <depositor>Gonchar Vasili</depositor>
+            <account_ID>q5</account_ID>
+            <amount_on_deposit>700</amount_on_deposit>
+            <profitability>2.5</profitability>
+            <time_constraints>2018-01-10T18:00:00</time_constraints>
+        </deposit>
+        <deposit>
+            <country>USA</country>
+            <type>poste restance</type>
+            <depositor>Onegin Evgen</depositor>
+            <account_ID>q6</account_ID>
+            <amount_on_deposit>4450</amount_on_deposit>
+            <profitability>3.5</profitability>
+            <time_constraints>1883-03-20T09:00:00</time_constraints>
+        </deposit>
+    </central_bank>
+
+</banks>

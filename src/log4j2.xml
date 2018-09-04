@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <File name="FILE" fileName="logs/debugError.log">
+            <PatternLayout pattern="%d{ISO8601} [%-5p] (%F:%L) - %m%n"/>
+        </File>
+        <Console name="STDOUT" target="SYSTEM_OUT"  >
+            <PatternLayout pattern="%d{ABSOLUTE} [%-5p] (%F:%L) - %m%n"/>
+            <Filters>
+                <ThresholdFilter level="warn"  onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info"  onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Console>
+    </appenders>
+    <loggers>
+        <Logger name="com.gmail.trair8.runner.Runner" additivity="false">
+            <appender-ref ref="FILE" level="error"/>
+            <appender-ref ref="STDOUT" level="info"/>
+        </Logger>
+        <root level="debug">
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </loggers>
+
+</configuration>
