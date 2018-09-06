@@ -1,4 +1,4 @@
-package com.gmail.trair8.parsing;
+package main.com.gmail.trair8.parsing;
 
 public class BanksBuilderFactory {
 

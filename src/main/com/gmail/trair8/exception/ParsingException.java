@@ -1,4 +1,4 @@
-package com.gmail.trair8.exception;
+package main.com.gmail.trair8.exception;
 
 public class ParsingException extends Exception{
     public ParsingException() {

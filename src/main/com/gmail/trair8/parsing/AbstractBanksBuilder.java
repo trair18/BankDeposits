@@ -1,6 +1,6 @@
-package com.gmail.trair8.parsing;
+package main.com.gmail.trair8.parsing;
 
-import com.gmail.trair8.entity.Bank;
+import main.com.gmail.trair8.entity.Bank;
 
 import java.util.HashSet;
 import java.util.Set;

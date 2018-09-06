@@ -1,6 +1,6 @@
-package com.gmail.trair8.parsing;
+package main.com.gmail.trair8.parsing;
 
-import com.gmail.trair8.entity.*;
+import main.com.gmail.trair8.entity.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;

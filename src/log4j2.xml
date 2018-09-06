@@ -13,7 +13,7 @@
         </Console>
     </appenders>
     <loggers>
-        <Logger name="com.gmail.trair8.runner.Runner" additivity="false">
+        <Logger name="main.com.gmail.trair8.runner.Runner" additivity="false">
             <appender-ref ref="FILE" level="error"/>
             <appender-ref ref="STDOUT" level="info"/>
         </Logger>

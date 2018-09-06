@@ -1,0 +1,13 @@
+<banks>
+    <commercial_bank name="Bank Moscow-Minsk" branches_number="6">
+        <deposit>
+            <country>Belarus</country>
+            <type>metal</type>
+            <depositor>Ivanov Ivan</depositor>
+            <account_ID>q1</account_ID>
+            <amount_on_deposit>450</amount_on_deposit>
+            <profitability>12.5</profitability>
+            <time_constraints>2018-05-30T10:28:44</time_constraints>
+        </deposit>
+    </commercial_bank>
+</banks>

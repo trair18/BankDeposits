@@ -1,4 +1,4 @@
-package com.gmail.trair8.entity;
+package main.com.gmail.trair8.entity;
 
 public enum BanksEnum {
     BANKS("banks"),
